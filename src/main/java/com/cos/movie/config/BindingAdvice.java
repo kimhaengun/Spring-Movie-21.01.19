@@ -41,7 +41,7 @@ public class BindingAdvice {
 					for(FieldError error : bindingResult.getFieldErrors()) {
 						errorMap.put(error.getField(), error.getDefaultMessage());
 					}
-					return new CommonDto<>(HttpStatus.BAD_REQUEST.value(),errorMap);
+					return new CommonDto<>(HttpStatus.INTERNAL_SERVER_ERROR.value(),"false");
 				}
 			}
 		}
